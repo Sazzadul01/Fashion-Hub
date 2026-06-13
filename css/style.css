@@ -1,0 +1,141 @@
+/* style.css - Custom styling for Hijab Shop
+   Colors:
+     Primary:  #8E6C88
+     Secondary: #F5EBDD
+     Accent: #D8B4A0
+*/
+
+/* Base styles */
+:root{
+  --primary: #8E6C88;
+  --secondary: #F5EBDD;
+  --accent: #D8B4A0;
+  --muted: #6c6c6c;
+  --soft-shadow: 0 10px 25px rgba(142,108,136,0.08);
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  background: #fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Brand logo circle */
+.brand-logo {
+  width:48px;
+  height:48px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  font-weight:700;
+  font-size:1.1rem;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(180deg, rgba(233,221,231,0.2), transparent);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.hero .hero-image {
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: .5rem;
+}
+
+/* Category card */
+.category-card {
+  border: none;
+  cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease;
+  background: linear-gradient(180deg, #fff, var(--secondary));
+  min-height:120px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--soft-shadow);
+}
+.category-icon {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+/* Cards and products */
+.card {
+  border-radius: .6rem;
+  overflow: hidden;
+}
+.product-card .card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+.product-name {
+  color: var(--primary);
+  font-weight:600;
+}
+.price {
+  color: #222;
+  font-weight:700;
+}
+
+/* Testimonial */
+.testimonial {
+  background: #fff;
+  border-radius: .5rem;
+  transition: transform .25s ease;
+}
+.testimonial:hover { transform: translateY(-6px) }
+
+/* Team photos */
+.team-photo {
+  width:90px;
+  height:90px;
+  object-fit:cover;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.btn-outline-secondary {
+  color: var(--primary);
+  border-color: rgba(142,108,136,0.15);
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Shop product card hover */
+.product-card .card-body {
+  transition: transform .25s ease;
+}
+.product-card:hover .card-body {
+  transform: translateY(-6px);
+}
+
+/* Small helpers */
+.bg-secondary-section {
+  background: linear-gradient(90deg, rgba(216,180,160,0.06), rgba(245,237,221,0.04));
+}
+
+/* Cart table responsive */
+.table-img {
+  width:72px;
+  height:72px;
+  object-fit:cover;
+}
+
+/* Responsive tweaks */
+@media (max-width:767.98px) {
+  .hero .display-5 { font-size:1.6rem; }
+  .brand-logo { width:40px; height:40px; font-size:1rem; }
+  .product-card .card-img-top { height: 180px; }
+}
